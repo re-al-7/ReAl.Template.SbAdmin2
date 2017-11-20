@@ -1,6 +1,6 @@
 # Plantilla NetCore para SB Admin 2
 
-[![Build status](https://ci.appveyor.com/api/projects/status/h2gb83cvhb2vi3al?svg=true)](https://ci.appveyor.com/project/re_al_/real-template-lumino)
+[![Build status](https://ci.appveyor.com/api/projects/status/gi42uswt7pj649y1?svg=true)](https://ci.appveyor.com/project/re_al_/real-template-sbadmin2)
 
 ---------------------------------------
 
