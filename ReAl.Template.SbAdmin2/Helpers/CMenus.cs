@@ -37,13 +37,13 @@ namespace ReAl.Template.SbAdmin2.Helpers
             if (miContexto.Session.GetString("currentApp") == "CLA")
             {
                 obj = new EntSegPaginas();
-                obj.descripcionspg = "Hijo CLA";
-                obj.nombrespg = "dashboard";
+                obj.descripcionspg = "Aplicaciones";
+                obj.nombrespg = "SegAplicaciones";
                 obj.nombremenuspg = "index";
                 lstPaginas.Add(obj);
             }
             obj = new EntSegPaginas();
-            obj.descripcionspg = "Hijo normal";
+            obj.descripcionspg = "Usuarios";
             obj.nombrespg = "segusuario";
             obj.nombremenuspg = "index";
             lstPaginas.Add(obj);
