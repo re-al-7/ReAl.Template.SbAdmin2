@@ -14,17 +14,17 @@ before_build:
     # Display .NET Core version
     - cmd: dotnet --version
     # Display minimal restore text
-    - cmd: dotnet restore ./ReAl.Template.Lumino/ReAl.Template.Lumino.csproj --verbosity m
+    - cmd: dotnet restore ./ReAl.Template.SbAdmin2/ReAl.Template.SbAdmin2.csproj --verbosity m
     
 build_script:
     # output will be in ./src/bin/debug/netcoreapp1.1/publish
-    - cmd: dotnet publish ./ReAl.Template.Lumino/ReAl.Template.Lumino.csproj
+    - cmd: dotnet publish ./ReAl.Template.SbAdmin2/ReAl.Template.SbAdmin2.csproj
 after_build:
     # For once the build has completed
     
 artifacts:
-- path: '\ReAl.Template.Lumino\bin\Debug\netcoreapp2.0\publish'
-  name: Lumino
+- path: '\ReAl.Template.SbAdmin2\bin\Debug\netcoreapp2.0\publish'
+  name: SbAdmin2
 
 clone_depth: 1
 on_finish :
