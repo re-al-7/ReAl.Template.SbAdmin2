@@ -1,0 +1,25 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/css/integrate.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "wwwroot/lib/metisMenu/dist/metisMenu.min.css",
+      "wwwroot/css/sb-admin-2.min.css",
+      "wwwroot/lib/font-awesome/css/font-awesome.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/integrate.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "wwwroot/lib/metisMenu/dist/metisMenu.min.js",
+      "js/sb-admin-2.min.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
