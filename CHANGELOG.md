@@ -1,12 +1,17 @@
 # Cosas por hacer
 
-- [ ] Añadir metodos CRUD de ejemplo
+
 - [ ] Usar distintos iconos en cada menu
 
 # Historial de cambios
 
 Estos son cambios que se han implementado respectivamente.
 
+## 1.1
+
+**2017-11-20**
+
+- [x] Añadir metodos CRUD de ejemplo para Razor Pages
 
 ## 1.0
 
