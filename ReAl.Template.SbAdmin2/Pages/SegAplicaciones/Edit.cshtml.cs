@@ -36,6 +36,7 @@ namespace ReAl.Template.SbAdmin2.Pages.SegAplicaciones
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)

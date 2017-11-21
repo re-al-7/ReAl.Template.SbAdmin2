@@ -26,6 +26,9 @@ namespace ReAl.Template.SbAdmin2.Pages.SegAplicaciones
         {
             if (!ModelState.IsValid)
             {
+                ListApp = this.GetAplicaciones();
+                ListPages = this.GetPages();
+                Usuario = this.getUserName();
                 return Page();
             }
 

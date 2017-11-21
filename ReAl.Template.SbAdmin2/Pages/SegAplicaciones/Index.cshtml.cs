@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ReAl.Template.SbAdmin2.Dal.Entidades;
+using ReAl.Template.SbAdmin2.Helpers;
 using ReAl.Template.SbAdmin2.Models;
 
 namespace ReAl.Template.SbAdmin2.Pages.SegAplicaciones
@@ -19,24 +22,29 @@ namespace ReAl.Template.SbAdmin2.Pages.SegAplicaciones
             ListApp = this.GetAplicaciones();
             ListPages = this.GetPages();
             Usuario = this.getUserName();
-            
-            Listado = new List<EntSegAplicaciones>();
 
-            for (int i = 0; i < 500; i++)
-            {
-                var obj = new EntSegAplicaciones();
-                obj.aplicacionsap = "APP" + i;
-                obj.descripcionsap = "Descripcion " + i;
-                Listado.Add(obj);
-            }
+            Listado = DataExample.AppListado;
         }
         
         [HttpPost]
-        public IActionResult OnPostDeleteAsync(string id)
+        public IActionResult OnPost(string id)
         {
-            //Eliminamos el registro
+            try
+            {
+                //Eliminamos el registro
+                var item = DataExample.AppListado.SingleOrDefault(x => x.aplicacionsap == id);
+                if (item != null)
+                    DataExample.AppListado.Remove(item);
             
-            return RedirectToPage();
+                //Refrescamos
+                TempData["Message"] = "Se ha eliminado el registro";
+                return RedirectToPage();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

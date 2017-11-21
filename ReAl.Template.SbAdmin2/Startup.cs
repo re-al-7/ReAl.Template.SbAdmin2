@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ReAl.Template.SbAdmin2.Helpers;
 
 namespace ReAl.Template.SbAdmin2
 {
@@ -136,6 +137,8 @@ namespace ReAl.Template.SbAdmin2
                     name: "default",
                     template: "{controller=Account}/{action=Login}/{id?}");
             });
+
+            DataExample.CargarListadoApp();
         }
     }
 }
